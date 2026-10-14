@@ -1,0 +1,588 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ========================================= */
+/* VARIÁVEIS                                 */
+/* ========================================= */
+
+:root {
+    /* Identidade principal */
+    --turquesa: #0F9D9A;
+    --turquesa-escuro: #087F7C;
+    --turquesa-claro: #E8F7F6;
+
+    --azul-profundo: #123B5D;
+    --azul-medio: #1C557D;
+    --azul-claro: #EAF3F9;
+
+    /* Cores dos indicadores */
+    --azul-card: #2474A6;
+    --azul-card-fundo: #EDF6FC;
+
+    --turquesa-card: #0F9D9A;
+    --turquesa-card-fundo: #EAF8F7;
+
+    --laranja-card: #D88924;
+    --laranja-card-fundo: #FFF6E8;
+
+    --roxo-card: #7561A8;
+    --roxo-card-fundo: #F3F0FA;
+
+    --verde-card: #3C9270;
+    --verde-card-fundo: #EDF8F3;
+
+    --fundo: #F4F8FA;
+    --branco: #FFFFFF;
+
+    --borda: #DCE8EC;
+    --borda-hover: #B7D8D9;
+
+    --texto-principal: #17324D;
+    --texto-secundario: #6B7C8D;
+
+    --sombra-suave:
+        0 4px 16px rgba(18, 59, 93, 0.06);
+
+    --sombra-hover:
+        0 8px 24px rgba(18, 59, 93, 0.12);
+}
+
+
+/* ========================================= */
+/* BODY                                      */
+/* ========================================= */
+
+body {
+    min-height: 100vh;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    background: var(--fundo);
+
+    color: var(--texto-principal);
+}
+
+
+/* ========================================= */
+/* CONTAINER                                 */
+/* ========================================= */
+
+.dashboard-container {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ========================================= */
+/* HEADER                                    */
+/* ========================================= */
+
+.dashboard-header {
+    width: 100%;
+    min-height: 80px;
+
+    padding: 20px 32px;
+
+    background: var(--branco);
+
+    border-bottom: 1px solid var(--borda);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    box-shadow:
+        0 2px 8px rgba(18, 59, 93, 0.04);
+}
+
+
+.dashboard-header h1 {
+    font-size: 24px;
+    font-weight: 700;
+
+    color: var(--azul-profundo);
+
+    margin-bottom: 4px;
+}
+
+
+.dashboard-header p {
+    font-size: 14px;
+
+    color: var(--texto-secundario);
+}
+
+
+/* ========================================= */
+/* BOTÃO SAIR                                */
+/* ========================================= */
+
+#logoutButton {
+    padding: 10px 18px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 8px;
+
+    background: var(--branco);
+
+    color: var(--azul-profundo);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s,
+        color 0.2s,
+        transform 0.2s,
+        box-shadow 0.2s;
+}
+
+
+#logoutButton:hover {
+    background: var(--turquesa);
+
+    border-color: var(--turquesa);
+
+    color: var(--branco);
+
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 4px 12px rgba(15, 157, 154, 0.20);
+}
+
+
+#logoutButton:active {
+    transform: translateY(0);
+}
+
+
+/* ========================================= */
+/* CONTEÚDO                                  */
+/* ========================================= */
+
+.dashboard-content {
+    width: 100%;
+
+    padding: 28px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 24px;
+}
+
+
+/* ========================================= */
+/* EMPRESA                                   */
+/* ========================================= */
+
+.empresa-section {
+    min-width: 0;
+
+    background: var(--branco);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 12px;
+
+    padding: 24px;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        border-color 0.2s,
+        box-shadow 0.2s;
+}
+
+
+.empresa-section:hover {
+    border-color: var(--borda-hover);
+
+    box-shadow:
+        0 6px 20px rgba(18, 59, 93, 0.07);
+}
+
+
+/* ========================================= */
+/* CABEÇALHO DA EMPRESA                     */
+/* ========================================= */
+
+.empresa-header {
+    margin-bottom: 24px;
+
+    padding-bottom: 16px;
+
+    border-bottom: 1px solid var(--borda);
+
+    position: relative;
+}
+
+
+.empresa-header::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 70px;
+    height: 2px;
+
+    background: var(--turquesa);
+
+    border-radius: 2px;
+}
+
+
+.empresa-header h2 {
+    font-size: 22px;
+
+    font-weight: 700;
+
+    color: var(--azul-profundo);
+}
+
+
+/* ========================================= */
+/* PERÍODO                                   */
+/* ========================================= */
+
+.periodo-section {
+    margin-bottom: 28px;
+}
+
+
+.periodo-section:last-child {
+    margin-bottom: 0;
+}
+
+
+.periodo-section h3 {
+    margin-bottom: 14px;
+
+    font-size: 16px;
+
+    font-weight: 700;
+
+    color: var(--turquesa-escuro);
+}
+
+
+/* ========================================= */
+/* GRID DOS CARDS                            */
+/* ========================================= */
+
+.cards-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+
+/* ========================================= */
+/* CARD BASE                                 */
+/* ========================================= */
+
+.indicador-card {
+    min-height: 105px;
+
+    padding: 17px;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 10px;
+
+    background: var(--branco);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s,
+        border-color 0.2s;
+}
+
+
+/* Barra lateral */
+
+.indicador-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 4px;
+    height: 100%;
+
+    background: var(--card-cor);
+
+    opacity: 0.9;
+}
+
+
+/* Hover */
+
+.indicador-card:hover {
+    transform: translateY(-3px);
+
+    border-color: var(--card-cor);
+
+    box-shadow:
+        0 8px 20px color-mix(
+            in srgb,
+            var(--card-cor) 15%,
+            transparent
+        );
+}
+
+
+/* ========================================= */
+/* LABEL                                     */
+/* ========================================= */
+
+.card-label {
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: var(--texto-secundario);
+}
+
+
+/* ========================================= */
+/* VALOR                                     */
+/* ========================================= */
+
+.indicador-card strong {
+    margin-top: 12px;
+
+    font-size: 20px;
+
+    font-weight: 700;
+
+    color: var(--card-cor);
+}
+
+
+/* ========================================= */
+/* PEDIDOS FEITOS                            */
+/* ========================================= */
+
+.card-pedidos {
+    --card-cor: var(--azul-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-card-fundo),
+            #FFFFFF
+        );
+
+    border-color: #D5E8F4;
+}
+
+
+/* ========================================= */
+/* ORÇAMENTOS PENDENTES                     */
+/* ========================================= */
+
+.card-orcamentos {
+    --card-cor: var(--turquesa-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--turquesa-card-fundo),
+            #FFFFFF
+        );
+
+    border-color: #CDEAE8;
+}
+
+
+/* ========================================= */
+/* PEDIDOS PENDENTES                        */
+/* ========================================= */
+
+.card-pedidos-pendentes {
+    --card-cor: var(--laranja-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--laranja-card-fundo),
+            #FFFFFF
+        );
+
+    border-color: #F0DFC1;
+}
+
+
+/* ========================================= */
+/* CLIENTES ATENDIDOS                       */
+/* ========================================= */
+
+.card-clientes {
+    --card-cor: var(--roxo-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--roxo-card-fundo),
+            #FFFFFF
+        );
+
+    border-color: #DDD6EF;
+}
+
+
+/* ========================================= */
+/* META                                      */
+/* ========================================= */
+
+.card-meta {
+    --card-cor: var(--azul-profundo);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--azul-claro),
+            #FFFFFF
+        );
+
+    border-color: #D4E2EC;
+}
+
+
+/* ========================================= */
+/* META ATINGIDA                            */
+/* ========================================= */
+
+.card-percentual {
+    --card-cor: var(--verde-card);
+
+    background:
+        linear-gradient(
+            135deg,
+            var(--verde-card-fundo),
+            #FFFFFF
+        );
+
+    border-color: #D0E9DD;
+}
+
+
+/* ========================================= */
+/* DESTAQUE DO VALOR DA META                */
+/* ========================================= */
+
+.card-meta strong {
+    font-size: 21px;
+
+    color: var(--azul-profundo);
+}
+
+
+.card-percentual strong {
+    font-size: 24px;
+
+    color: var(--verde-card);
+}
+
+
+/* ========================================= */
+/* RESPONSIVIDADE - TABLET                  */
+/* ========================================= */
+
+@media (max-width: 1100px) {
+
+    .dashboard-content {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* ========================================= */
+/* RESPONSIVIDADE - CELULAR                 */
+/* ========================================= */
+
+@media (max-width: 600px) {
+
+    .dashboard-header {
+        padding: 16px 20px;
+    }
+
+
+    .dashboard-header h1 {
+        font-size: 20px;
+    }
+
+
+    .dashboard-header p {
+        font-size: 13px;
+    }
+
+
+    #logoutButton {
+        padding: 9px 14px;
+
+        font-size: 13px;
+    }
+
+
+    .dashboard-content {
+        padding: 16px;
+
+        gap: 16px;
+    }
+
+
+    .empresa-section {
+        padding: 18px;
+    }
+
+
+    .empresa-header h2 {
+        font-size: 20px;
+    }
+
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .indicador-card {
+        min-height: 95px;
+    }
+
+}

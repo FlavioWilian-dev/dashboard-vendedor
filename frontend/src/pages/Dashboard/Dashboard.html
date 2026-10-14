@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Dashboard Vendedor</title>
+
+    <link rel="stylesheet" href="/frontend/src/pages/Dashboard/Dashboard.css" />
+  </head>
+
+  <body>
+    <div class="dashboard-container">
+      <!-- CABEÇALHO -->
+      <header class="dashboard-header">
+        <div>
+          <h1>Dashboard Vendedor</h1>
+
+          <p id="usuarioNome">Carregando...</p>
+        </div>
+
+        <button id="logoutButton">Sair</button>
+      </header>
+
+      <!-- CONTEÚDO PRINCIPAL -->
+      <main class="dashboard-content">
+        <!-- ========================= -->
+        <!-- SHALON                    -->
+        <!-- ========================= -->
+
+        <section class="empresa-section">
+          <div class="empresa-header">
+            <h2>Shalon</h2>
+          </div>
+
+          <!-- DIA -->
+          <div class="periodo-section">
+            <h3>Hoje</h3>
+
+            <div class="cards-grid">
+              <!-- PEDIDOS FEITOS -->
+              <article class="indicador-card card-pedidos">
+                <span class="card-label"> Pedidos feitos </span>
+
+                <strong id="shalonDiaPedidosFeitos"> R$ 0,00 </strong>
+              </article>
+
+              <!-- ORÇAMENTOS PENDENTES -->
+              <article class="indicador-card card-orcamentos">
+                <span class="card-label"> Orçamentos pendentes </span>
+
+                <strong id="shalonDiaOrcamentosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- PEDIDOS PENDENTES -->
+              <article class="indicador-card card-pedidos-pendentes">
+                <span class="card-label"> Pedidos pendentes </span>
+
+                <strong id="shalonDiaPedidosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- CLIENTES ATENDIDOS -->
+              <article class="indicador-card card-clientes">
+                <span class="card-label"> Clientes atendidos </span>
+
+                <strong id="shalonDiaClientesAtendidos"> 0 </strong>
+              </article>
+
+              <!-- META -->
+              <article class="indicador-card card-meta">
+                <span class="card-label"> Meta do dia </span>
+
+                <strong id="shalonDiaMeta"> R$ 0,00 </strong>
+              </article>
+
+              <!-- META ATINGIDA -->
+              <article class="indicador-card card-percentual">
+                <span class="card-label"> Meta atingida </span>
+
+                <strong id="shalonDiaPercentualMeta"> 0% </strong>
+              </article>
+            </div>
+          </div>
+
+          <!-- MÊS -->
+          <div class="periodo-section">
+            <h3>Este mês</h3>
+
+            <div class="cards-grid">
+              <!-- PEDIDOS FEITOS -->
+              <article class="indicador-card card-pedidos">
+                <span class="card-label"> Pedidos feitos </span>
+
+                <strong id="shalonMesPedidosFeitos"> R$ 0,00 </strong>
+              </article>
+
+              <!-- ORÇAMENTOS PENDENTES -->
+              <article class="indicador-card card-orcamentos">
+                <span class="card-label"> Orçamentos pendentes </span>
+
+                <strong id="shalonMesOrcamentosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- PEDIDOS PENDENTES -->
+              <article class="indicador-card card-pedidos-pendentes">
+                <span class="card-label"> Pedidos pendentes </span>
+
+                <strong id="shalonMesPedidosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- CLIENTES ATENDIDOS -->
+              <article class="indicador-card card-clientes">
+                <span class="card-label"> Clientes atendidos </span>
+
+                <strong id="shalonMesClientesAtendidos"> 0 </strong>
+              </article>
+
+              <!-- META -->
+              <article class="indicador-card card-meta">
+                <span class="card-label"> Meta do mês </span>
+
+                <strong id="shalonMesMeta"> R$ 0,00 </strong>
+              </article>
+
+              <!-- META ATINGIDA -->
+              <article class="indicador-card card-percentual">
+                <span class="card-label"> Meta atingida </span>
+
+                <strong id="shalonMesPercentualMeta"> 0% </strong>
+              </article>
+            </div>
+          </div>
+        </section>
+
+        <!-- ========================= -->
+        <!-- VERACCI                   -->
+        <!-- ========================= -->
+
+        <section class="empresa-section">
+          <div class="empresa-header">
+            <h2>Veracci</h2>
+          </div>
+
+          <!-- DIA -->
+          <div class="periodo-section">
+            <h3>Hoje</h3>
+
+            <div class="cards-grid">
+              <!-- PEDIDOS FEITOS -->
+              <article class="indicador-card card-pedidos">
+                <span class="card-label"> Pedidos feitos </span>
+
+                <strong id="veracciDiaPedidosFeitos"> R$ 0,00 </strong>
+              </article>
+
+              <!-- ORÇAMENTOS PENDENTES -->
+              <article class="indicador-card card-orcamentos">
+                <span class="card-label"> Orçamentos pendentes </span>
+
+                <strong id="veracciDiaOrcamentosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- PEDIDOS PENDENTES -->
+              <article class="indicador-card card-pedidos-pendentes">
+                <span class="card-label"> Pedidos pendentes </span>
+
+                <strong id="veracciDiaPedidosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- CLIENTES ATENDIDOS -->
+              <article class="indicador-card card-clientes">
+                <span class="card-label"> Clientes atendidos </span>
+
+                <strong id="veracciDiaClientesAtendidos"> 0 </strong>
+              </article>
+
+              <!-- META -->
+              <article class="indicador-card card-meta">
+                <span class="card-label"> Meta do dia </span>
+
+                <strong id="veracciDiaMeta"> R$ 0,00 </strong>
+              </article>
+
+              <!-- META ATINGIDA -->
+              <article class="indicador-card card-percentual">
+                <span class="card-label"> Meta atingida </span>
+
+                <strong id="veracciDiaPercentualMeta"> 0% </strong>
+              </article>
+            </div>
+          </div>
+
+          <!-- MÊS -->
+          <div class="periodo-section">
+            <h3>Este mês</h3>
+
+            <div class="cards-grid">
+              <!-- PEDIDOS FEITOS -->
+              <article class="indicador-card card-pedidos">
+                <span class="card-label"> Pedidos feitos </span>
+
+                <strong id="veracciMesPedidosFeitos"> R$ 0,00 </strong>
+              </article>
+
+              <!-- ORÇAMENTOS PENDENTES -->
+              <article class="indicador-card card-orcamentos">
+                <span class="card-label"> Orçamentos pendentes </span>
+
+                <strong id="veracciMesOrcamentosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- PEDIDOS PENDENTES -->
+              <article class="indicador-card card-pedidos-pendentes">
+                <span class="card-label"> Pedidos pendentes </span>
+
+                <strong id="veracciMesPedidosPendentes"> R$ 0,00 </strong>
+              </article>
+
+              <!-- CLIENTES ATENDIDOS -->
+              <article class="indicador-card card-clientes">
+                <span class="card-label"> Clientes atendidos </span>
+
+                <strong id="veracciMesClientesAtendidos"> 0 </strong>
+              </article>
+
+              <!-- META -->
+              <article class="indicador-card card-meta">
+                <span class="card-label"> Meta do mês </span>
+
+                <strong id="veracciMesMeta"> R$ 0,00 </strong>
+              </article>
+
+              <!-- META ATINGIDA -->
+              <article class="indicador-card card-percentual">
+                <span class="card-label"> Meta atingida </span>
+
+                <strong id="veracciMesPercentualMeta"> 0% </strong>
+              </article>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="/frontend/src/pages/Dashboard/Dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard Vendedor</title>
+
+    <link rel="stylesheet" href="/frontend/src/pages/Login/Login.css">
+</head>
+
+<body>
+
+    <main class="login-container">
+
+        <section class="login-card">
+
+            <div class="login-header">
+                <h1>Dashboard Vendedor</h1>
+                <p>Entre com seu usuário para continuar</p>
+            </div>
+
+            <form id="loginForm">
+
+                <div class="form-group">
+                    <label for="login">Usuário</label>
+
+                    <input
+                        type="text"
+                        id="login"
+                        name="login"
+                        placeholder="Digite seu usuário"
+                        autocomplete="username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="senha">Senha</label>
+
+                    <input
+                        type="password"
+                        id="senha"
+                        name="senha"
+                        placeholder="Digite sua senha"
+                        autocomplete="current-password"
+                        required
+                    >
+                </div>
+
+                <div id="loginError" class="login-error"></div>
+
+                <button type="submit" id="loginButton">
+                    Entrar
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <script src="/frontend/src/pages/Login/Login.js"></script>
+
+</body>
+</html>
+
